@@ -35,8 +35,6 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-CR>"] = "o<ESC>"
 lvim.keys.insert_mode["<S-CR>"] = "<ESC>o"
-lvim.keys.normal_mode["<C-t>"] = ":ToggleTerm<CR>"
-lvim.keys.visual_mode["<C-t>"] = ":ToggleTerm<CR>"
 -- yank cursor reset
 lvim.keys.visual_mode["y"] = "ygv<ESC>" -- visual_mode yank -> moves cursor to end of yanked text and into normal mode
 
@@ -64,6 +62,9 @@ lvim.keys.normal_mode["c*"] = "*Ncgn"
 lvim.keys.normal_mode["c#"] = "#NcgN"
 
 lvim.keys.normal_mode["N"] = "Nzz"
+lvim.keys.normal_mode["n"] = "nzz"
+lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
+lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
 lvim.keys.normal_mode["n"] = "nzz"
 lvim.keys.insert_mode["jk"] = "<ESC>"
 
