@@ -20,7 +20,7 @@ end
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "darcula-solid"
+lvim.colorscheme = "tokyonight-night"
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
