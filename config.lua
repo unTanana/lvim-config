@@ -33,8 +33,11 @@ lvim.lsp.automatic_servers_installation = true
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<S-CR>"] = "o<ESC>"
-lvim.keys.insert_mode["<S-CR>"] = "<ESC>o"
+lvim.keys.normal_mode["<S-CR>"] = "o<ESC>cc<ESC>"
+lvim.keys.insert_mode["<S-CR>"] = "<ESC>o<ESC>cc"
+lvim.keys.insert_mode["<S-CR>"] = "<ESC>o<ESC>cc"
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- yank cursor reset
 lvim.keys.visual_mode["y"] = "ygv<ESC>" -- visual_mode yank -> moves cursor to end of yanked text and into normal mode
 
@@ -142,12 +145,12 @@ lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<cr>", "Toggle Zen" }
 
 lvim.builtin.telescope.defaults.file_ignore_patterns = { "node_modules", ".git" }
 
-lvim.builtin.which_key.mappings["S"] = {
-    name = "Session",
-    c = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
-    l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
-    Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
-}
+-- lvim.builtin.which_key.mappings["S"] = {
+--     name = "Session",
+--     c = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
+--     l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
+--     Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
+-- }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -157,6 +160,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.nvimtree.setup.view.width = 44
+lvim.builtin.terminal.open_mapping = "<C-t>"
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
