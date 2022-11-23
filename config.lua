@@ -33,9 +33,8 @@ lvim.lsp.automatic_servers_installation = true
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<S-CR>"] = "o<ESC>cc<ESC>"
-lvim.keys.insert_mode["<S-CR>"] = "<ESC>o<ESC>cc"
-lvim.keys.insert_mode["<S-CR>"] = "<ESC>o<ESC>cc"
+lvim.keys.normal_mode["<S-CR>"] = "o<ESC>"
+lvim.keys.insert_mode["<S-CR>"] = "<ESC>o"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- yank cursor reset
