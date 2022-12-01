@@ -271,9 +271,6 @@ lvim.plugins = {
         "nvim-treesitter/nvim-treesitter-context"
     },
     {
-        "wuelnerdotexe/vim-astro"
-    },
-    {
         "folke/zen-mode.nvim",
     },
     {
@@ -342,28 +339,12 @@ local nvim_lsp = require "lspconfig"
 nvim_lsp.tailwindcss.setup {}
 -- require("copilot").setup()
 
--- astro config attempt
-local configs = require 'lspconfig.configs'
-if not configs['astro'] then
-    configs['astro'] = {
-        default_config = {
-            cmd = { 'astro-ls', '--stdio' },
-            filetypes = { 'astro' },
-            root_dir = nvim_lsp.util.root_pattern('package.json', 'tsconfig.json', 'jsconfig.json', '.git'),
-            docs = {
-                description = 'https://github.com/withastro/language-tools',
-                root_dir = [[root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")]],
-            },
-            init_options = {
-                configuration = {
-                    astro = {},
-                },
-            },
-            settings = {},
-        },
+-- astro file detection
+vim.filetype.add({
+    extension = {
+        astro = "astro"
     }
-end
-
+})
 
 
 lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
