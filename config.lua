@@ -142,7 +142,7 @@ lvim.builtin.which_key.mappings["g"] = { "<cmd>LazyGit<cr>", "LazyGit" }
 
 lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<cr>", "Toggle Zen" }
 
-lvim.builtin.telescope.defaults.file_ignore_patterns = { "node_modules", ".git" }
+lvim.builtin.telescope.defaults.file_ignore_patterns = { "node_modules", ".git", ".DS_Store" }
 
 -- lvim.builtin.which_key.mappings["S"] = {
 --     name = "Session",
